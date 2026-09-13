@@ -1,0 +1,35 @@
+#include <iostream>              // Input/output
+#include <string>                // String
+#include <utility>               // std::move
+
+class Employee {                // Base class
+
+protected:
+    std::string name;           // Employee name
+
+public:
+    explicit Employee(std::string employeeName) // Constructor
+        : name(std::move(employeeName)) {}       // Initialize name
+};
+
+class Developer : public Employee {             // Derived class
+
+private:
+    std::string language;        // Programming language
+
+public:
+    Developer(std::string employeeName, std::string programmingLanguage)
+        : Employee(std::move(employeeName)),     // Call parent constructor
+          language(std::move(programmingLanguage)) {} // Initialize language
+
+    void display() const {       // Display function
+        std::cout << "Developer: " << name << '\n';     // Print name
+        std::cout << "Language: " << language << '\n';  // Print language
+    }
+};
+
+int main() {                     // Program starts here
+    Developer developer("Neha", "C++"); // Create object
+    developer.display();          // Call display()
+    return 0;                     // End program
+}

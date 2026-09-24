@@ -5,7 +5,7 @@
 | Field | Details |
 |---|---|
 | **Student Name** | Bhumi Aru |
-| **PRN** | 125 UAD 1 2 1 |
+| **PRN** | 125UAD1221 |
 | **Class / Division** | SY / D |
 | **Course Name** | OOPS (Object Oriented Programming) |
 | **Unit** | Unit I – C++ Programming Fundamentals |
